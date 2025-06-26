@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://sawerni.me
+
+# Sitemaps
+Sitemap: https://sawerni.me/sitemap.xml

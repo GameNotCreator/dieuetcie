@@ -1,0 +1,58 @@
+{
+    "familles" : [
+        {
+          "img": "/m1.jpg",
+          "title": "Casablanca",
+          "description": "Bel aspect cuir grain le plus vendu, large gamme de coloris"
+        },
+        {
+          "img": "/m2.jpg",
+          "title": "Victoria",
+          "description": "Grain discret et mat, large gamme de coloris"
+        },
+        {
+          "img": "/m3.jpg",
+          "title": "Castillan",
+          "description": "Grain discret, aspect brillant"
+        },
+        {
+          "img": "/m4.jpg",
+          "title": "Gomme",
+          "description": "Aspect caoutchouc mat, large gamme de coloris,"
+        },
+        {
+            "img": "/m6.jpg",
+            "title": "Coagulés PU",
+            "description": "Vous disposez d' une palette de couleur et de grain exceptionnelle offrant tous les aspects possibles ( toilé , nylon , vernis, autruche, etc..)"
+        },
+        {
+          "img": "/m5.jpg",
+          "title": " Les « Grainés »",
+          "description": "Lézard, Rodi, Pino, Cambrils ( sur fabrication spéciale, nous consulter)"
+        }
+      ],
+    "gammes" : [
+        {
+          "img": "/a.jpg",
+          "title": "Vivella",
+          "description": "Tisse avec un touché remarquable, des dizaines de coloris"
+        },
+        {
+          "img": "/b.jpg",
+          "title": "Préstige",
+          "description": "Façon cuir grainé, large gamme de coloris"
+        },
+        {
+          "img": "/c.jpg",
+          "title": "Charm",
+          "description": "Façon cuir graine, mat, large gamme de coloris"
+        },
+        {
+            "img": "/d.jpg",
+            "title": "Nebraska",
+            "description": "Très beau grain cuir"
+          }        
+      ]
+}
+
+  

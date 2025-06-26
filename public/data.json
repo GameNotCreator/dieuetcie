@@ -1,0 +1,33 @@
+[
+    {
+      "img": "/1.jpg",
+      "title": "Incrustation couleur",
+      "description": "Marquage à chaud incrusté en haute fréquence, limité en surface et en choix de couleurs. Idéal pour un rendu sobre et élégant sur des zones définies."
+    },
+    {
+      "img": "/2.jpg",
+      "title": "Dorure à chaud",
+      "description": "Finition premium appliquée à chaud avec effet doré, argenté ou en couleurs primaires. Parfaite pour une mise en valeur raffinée de votre logo ou motif."
+    },
+    {
+      "img": "/3.jpg",
+      "title": "Thermovirant",
+      "description": "Application à chaud de film thermovirant sur PU coagulé, pour un effet de changement de couleur sous la chaleur ou la lumière."
+    },
+    {
+      "img": "/4.jpg",
+      "title": "Voyant imprimé",
+      "description": "Voyant en PVC soudé, imprimé en sérigraphie ou en quadrichromie. Permet une personnalisation complexe sur tout type de grain ou de surface."
+    },
+    {
+      "img": "/5.jpg",
+      "title": "Incrustation en creux",
+      "description": "Marquage en creux réalisé en haute fréquence. Adapté à tous types de matériaux pour une gravure nette et durable."
+    },
+    {
+      "img": "/6.jpg",
+      "title": "Voyant sérigraphié",
+      "description": "Voyant en PVC soudé, imprimé en sérigraphie ou quadrichromie. Permet une reproduction fidèle et qualitative de logos complexes sur différentes textures."
+    }
+  ]
+  
