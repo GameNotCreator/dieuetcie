@@ -64,7 +64,7 @@ const Marketplace = ({ categories }) => {
           {Array.isArray(categories) &&
             categories.map((cat) => (
               <Link href={`/category/${cat._id}`} key={cat._id}>
-                <div className="card card-compact bg-base-100 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 cursor-pointer">
+                <div className="w-54 card card-compact bg-base-100 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-2 cursor-pointer">
                   <figure>
                     <img
                       src={cat.imageUrl}
@@ -127,7 +127,7 @@ const Marketplace = ({ categories }) => {
             Nous sommes à votre disposition pour répondre à vos besoins en
             maroquinerie publicitaire de luxe.
           </p>
-          <Link href="mailto:test@gmail.com" className="btn btn-primary">
+          <Link href="mailto:dieuetcie@orange.fr" className="btn btn-primary">
             Demander un devis
           </Link>
           <br/>
