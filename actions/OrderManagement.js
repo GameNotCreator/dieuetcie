@@ -41,7 +41,7 @@ export async function createOrderAction(data) {
       })
     );
     await resend.emails.send({
-      from: `Sawarni <sawarni@tunisian-pass.tn>`,
+      from: `Dieu & Cie <sawarni@tunisian-pass.tn>`,
       to: [`${data.email}`],
       subject: 'Confirmation de commande - Sawarni',
       html: html, // Remplace la propriété react par html

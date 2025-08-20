@@ -2,6 +2,8 @@
 import Marketplace from "@/components/Marketplace";
 import { getCategories } from "@/actions/ProductManagement";
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: "Accueil – Votre Boutique",
 };
