@@ -124,7 +124,7 @@ export default function Navbar() {
             </a>
             <a
               href="mailto:contact@ebs-diffusion.fr"
-              className="btn rounded-2xl bg-white border border-black/10"
+              className="btn rounded-2xl text-[#0d4b81] bg-white border border-black/10"
             >
               Email
             </a>
