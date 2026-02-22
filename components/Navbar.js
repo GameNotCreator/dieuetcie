@@ -61,12 +61,12 @@ export default function Navbar() {
     {/* Contact desktop */}
     <div className="hidden lg:flex flex-col items-center text-center text-sm gap-1">
       <span className="font-semibold">Thierry Collet</span>
-      <span className="font-bold text-lg">04 37 28 08 92</span>
+      <span className="font-bold text-lg" href="tel:+330795222152">07 95 22 21 52</span>
       <a
-        href="mailto:contact@ebs-diffusion.fr"
+        href="mailto:dieuetcie@orange.fr"
         className="text-[#0d4b81] hover:underline"
       >
-        contact@ebs-diffusion.fr
+        dieuetcie@orange.fr
       </a>
       <div className="flex gap-3 text-xl text-[#0d4b81] mt-1">
         <FaLinkedin className="cursor-pointer hover:opacity-70" />
@@ -117,13 +117,13 @@ export default function Navbar() {
           {/* Actions rapides */}
           <div className="grid grid-cols-2 gap-3 mb-4">
             <a
-              href="tel:+33437280892"
+              href="tel:+330795222152"
               className="btn rounded-2xl bg-[#0d4b81] text-white border-none"
             >
               Appeler
             </a>
             <a
-              href="mailto:contact@ebs-diffusion.fr"
+              href="mailto:dieuetcie@orange.fr"
               className="btn rounded-2xl text-[#0d4b81] bg-white border border-black/10"
             >
               Email
@@ -141,7 +141,7 @@ export default function Navbar() {
           {/* Réseaux */}
           <div className="mt-5 flex items-center justify-between">
             <div className="text-sm opacity-60">
-              Thierry Collet · 04 37 28 08 92
+              Thierry Collet · <span href="tel:+330795222152"> 07 95 22 21 52</span>
             </div>
             <div className="flex gap-4 text-xl text-[#0d4b81]">
               <FaLinkedin className="cursor-pointer hover:opacity-70" />
