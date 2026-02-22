@@ -7,7 +7,7 @@ export default function Contact() {
             </p>
 
             <div className="mb-16">
-                <button className="btn btn-neutral btn-lg text-white px-8 rounded-none border-2 border-black hover:bg-white hover:text-black transition-colors">
+                <button href="mailto:dieuetcie@orange.fr" className="btn btn-neutral btn-lg text-white px-8 rounded-none border-2 border-black hover:bg-white hover:text-black transition-colors">
                     DEMANDER UN DEVIS
                 </button>
             </div>
