@@ -7,10 +7,10 @@ const Footer = () => {
                 <h2 className="text-3xl font-bold mb-6">Dieu & Cie</h2>
 
                 <div className="mb-8">
-                    <p className="text-lg mb-2">100 rue Paul Vaillant Couturier 
+                    <p className="text-lg mb-2">100 rue Paul Vaillant Couturier
                         <br />93130 Noisy le Sec</p>
-                    <p className="text-lg">Telephone : 07 95 22 21 52</p>
-                    <p className="text-lg">Email : dieuetcie@orange.fr</p>
+                    <p className="text-lg">Telephone : <a href="tel:+33795222152" className="text-inherit no-underline hover:underline">07 95 22 21 52</a></p>
+                    <p className="text-lg">Email : <a href="mailto:dieuetcie@orange.fr" className="text-inherit no-underline hover:underline">dieuetcie@orange.fr</a></p>
                 </div>
 
                 <nav className="mb-8 flex flex-col items-center   justify-center text-center  ">
