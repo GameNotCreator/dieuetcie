@@ -30,71 +30,71 @@ export default function Navbar() {
   return (
     <>
       {/* NAVBAR = EXACTEMENT comme ton original */}
- <div className="navbar shadow-sm px-6 bg-[#F6F1E9] sticky top-0 z-40">
+      <div className="navbar shadow-sm px-6 bg-[#F6F1E9] sticky top-0 z-40">
 
-  {/* LEFT - Logo */}
-  <div className="navbar-start">
-    <Link href="/" className="flex items-center gap-2">
-      <Image
-        src="/logo.png"
-        alt="Dieu et Cie"
-        width={200}
-        height={30}
-        priority
-        className="h-auto max-h-24 w-auto lg:filter-none filter"
-      />
-    </Link>
-  </div>
+        {/* LEFT - Logo */}
+        <div className="navbar-start">
+          <Link href="/" className="flex items-center gap-2">
+            <Image
+              src="/logo.png"
+              alt="Dieu et Cie"
+              width={200}
+              height={30}
+              priority
+              className="h-auto max-h-24 w-auto lg:filter-none filter"
+            />
+          </Link>
+        </div>
 
-  {/* CENTER - Desktop menu */}
-  <div className="navbar-center hidden lg:flex">
-    <ul className="menu menu-horizontal gap-6 font-medium">
-      <li><Link href="/about">Qui sommes-nous ?</Link></li>
-      <li><Link href="/reference">Nos références</Link></li>
-      <li><Link href="/marquage">Techniques de marquage</Link></li>
-      <li><Link href="/contact">Contactez-nous</Link></li>
-    </ul>
-  </div>
+        {/* CENTER - Desktop menu */}
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal gap-6 font-medium">
+            <li><Link href="/about">Qui sommes-nous ?</Link></li>
+            <li><Link href="/reference">Nos références</Link></li>
+            <li><Link href="/marquage">Techniques de marquage</Link></li>
+            <li><Link href="/contact">Contactez-nous</Link></li>
+          </ul>
+        </div>
 
-  {/* RIGHT - Desktop contact + mobile burger */}
-  <div className="navbar-end flex items-center gap-2">
-    {/* Contact desktop */}
-    <div className="hidden lg:flex flex-col items-center text-center text-sm gap-1">
-      <span className="font-semibold">Thierry Collet</span>
-      <span className="font-bold text-lg" href="tel:+330795222152">07 95 22 21 52</span>
-      <a
-        href="mailto:dieuetcie@orange.fr"
-        className="text-[#0d4b81] hover:underline"
-      >
-        dieuetcie@orange.fr
-      </a>
-      <div className="flex gap-3 text-xl text-[#0d4b81] mt-1">
-        <FaLinkedin className="cursor-pointer hover:opacity-70" />
-        <FaFacebook className="cursor-pointer hover:opacity-70" />
-        <FaInstagram className="cursor-pointer hover:opacity-70" />
+        {/* RIGHT - Desktop contact + mobile burger */}
+        <div className="navbar-end flex items-center gap-2">
+          {/* Contact desktop */}
+          <div className="hidden lg:flex flex-col items-center text-center text-sm gap-1">
+            <span className="font-semibold">Thierry Collet</span>
+            <a href="tel:+33695222152" className="font-bold text-lg text-inherit no-underline hover:underline">06 95 22 21 52</a>
+            <a
+              href="mailto:dieuetcie@orange.fr"
+              className="text-[#0d4b81] hover:underline"
+            >
+              dieuetcie@orange.fr
+            </a>
+            <div className="flex gap-3 text-xl text-[#0d4b81] mt-1">
+              <FaLinkedin className="cursor-pointer hover:opacity-70" />
+              <FaFacebook className="cursor-pointer hover:opacity-70" />
+              <FaInstagram className="cursor-pointer hover:opacity-70" />
+            </div>
+          </div>
+
+          {/* Burger mobile */}
+          <button
+            type="button"
+            className="btn btn-ghost lg:hidden"
+            aria-label="Ouvrir le menu"
+            onClick={() => setOpen(true)}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </div>
-    </div>
-
-    {/* Burger mobile */}
-    <button
-      type="button"
-      className="btn btn-ghost lg:hidden"
-      aria-label="Ouvrir le menu"
-      onClick={() => setOpen(true)}
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
-          d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-  </div>
-</div>
 
 
       {/* BOTTOM SHEET MOBILE */}
@@ -117,7 +117,7 @@ export default function Navbar() {
           {/* Actions rapides */}
           <div className="grid grid-cols-2 gap-3 mb-4">
             <a
-              href="tel:+330795222152"
+              href="tel:+33695222152"
               className="btn rounded-2xl bg-[#0d4b81] text-white border-none"
             >
               Appeler
@@ -141,7 +141,7 @@ export default function Navbar() {
           {/* Réseaux */}
           <div className="mt-5 flex items-center justify-between">
             <div className="text-sm opacity-60">
-              Thierry Collet · <span href="tel:+330795222152"> 07 95 22 21 52</span>
+              Thierry Collet · <a href="tel:+33695222152" className="text-inherit no-underline"> 06 95 22 21 52</a>
             </div>
             <div className="flex gap-4 text-xl text-[#0d4b81]">
               <FaLinkedin className="cursor-pointer hover:opacity-70" />
