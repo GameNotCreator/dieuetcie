@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import marquage from "@/public/data.json";
 import matiere from "@/public/matiere.json";
 
@@ -27,7 +27,7 @@ const CardNoImage = ({ item }) => (
   <div className="card bg-white shadow-sm hover:shadow-md transition-all">
     <div className="card-body">
       <div className="flex items-start gap-3">
-        <div className="badge badge-neutral badge-lg mt-1">G</div>
+        <div className="badge badge-neutral badge-lg mt-1">{item.title?.trim().charAt(0).toUpperCase() || "G"}</div>
         <div>
           <h3 className="text-lg font-bold">{item.title}</h3>
           {item.description ? (
@@ -60,12 +60,10 @@ export default function MarquageMatiereShowcase() {
         {/* Header */}
         <div className="rounded-2xl bg-white shadow-sm p-6">
           <h1 className="text-3xl font-extrabold text-center">Marquage & Matières</h1>
-          <p className="text-gray-600 mt-2">
-          </p>
 
           {/* Tabs */}
           <div className="mt-6 flex items-center justify-center">
-            <div className="tabs tabs-boxed bg-[#F5F5F5] p-2 rounded-xl inline-flex">
+            <div className="tabs tabs-box bg-[#F5F5F5] p-2 rounded-xl inline-flex">
               <button
             className={`tab ${tab === "marquage" ? "tab-active text-[#0d4b81]" : "text-gray-400"}`}
                 onClick={() => setTab("marquage")}

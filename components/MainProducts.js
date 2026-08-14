@@ -1,4 +1,3 @@
-import React from 'react';
 import { getProducts } from '@/actions/categories';
 import Link from 'next/link';
 
@@ -10,7 +9,7 @@ const MainProducts = async () => {
             <h2 className="text-3xl font-bold text-center mb-8">Notre sélection</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {products.map((product) => (
-                    <Link href={`/contact`} key={product._id} className="card shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <Link href={`/contact`} key={product._id} className="card bg-white shadow-xl hover:shadow-2xl transition-shadow duration-300">
                         <figure className="h-48 overflow-hidden">
                             <img
                                 src={product.imageUrl}
@@ -19,7 +18,7 @@ const MainProducts = async () => {
                             />
                         </figure>
                         <div className="card-body">
-                            <div className="badge  bg-[#0d4b81]">{product.categoryId?.name || 'Uncategorized'}</div>
+                            <div className="badge bg-[#0d4b81] text-white">{product.categoryId?.name || 'Sans catégorie'}</div>
                             <h2 className="card-title">
                                 {product.name}
                             </h2>
