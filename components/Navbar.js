@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -38,10 +37,10 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="Dieu et Cie"
-              width={200}
-              height={30}
+              width={166}
+              height={94}
               priority
-              className="h-auto max-h-24 w-auto lg:filter-none filter"
+              className="h-auto max-h-24 w-auto"
             />
           </Link>
         </div>
@@ -68,11 +67,6 @@ export default function Navbar() {
             >
               dieuetcie@orange.fr
             </a>
-            <div className="flex gap-3 text-xl text-[#0d4b81] mt-1">
-              <FaLinkedin className="cursor-pointer hover:opacity-70" />
-              <FaFacebook className="cursor-pointer hover:opacity-70" />
-              <FaInstagram className="cursor-pointer hover:opacity-70" />
-            </div>
           </div>
 
           {/* Burger mobile */}
@@ -138,15 +132,10 @@ export default function Navbar() {
             <NavItem href="/contact">Contactez-nous</NavItem>
           </div>
 
-          {/* Réseaux */}
+          {/* Contact */}
           <div className="mt-5 flex items-center justify-between">
             <div className="text-sm opacity-60">
               Thierry Collet · <a href="tel:+33695222152" className="text-inherit no-underline"> 06 95 22 21 52</a>
-            </div>
-            <div className="flex gap-4 text-xl text-[#0d4b81]">
-              <FaLinkedin className="cursor-pointer hover:opacity-70" />
-              <FaFacebook className="cursor-pointer hover:opacity-70" />
-              <FaInstagram className="cursor-pointer hover:opacity-70" />
             </div>
           </div>
 

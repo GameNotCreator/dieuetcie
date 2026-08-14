@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 
 export default function ProductCard({ product }) {
   return (
-    <div className="card card-compact bg-white shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1">
+    <div className="card card-sm bg-white shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1">
       <figure>
         <img
           src={product.imageUrl}
@@ -22,7 +22,7 @@ export default function ProductCard({ product }) {
           </p>
         )}
         <div className="card-actions justify-center mt-4">
-          <Link href={'/contact'} className="btn btn-outline btn-[#0d4b81]">Demander un devis</Link>
+          <Link href={'/contact'} className="btn btn-outline border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white">Demander un devis</Link>
         </div>
       </div>
     </div>
@@ -34,7 +34,6 @@ ProductCard.propTypes = {
     name: PropTypes.string.isRequired,
     description: PropTypes.string,
     imageUrl: PropTypes.string.isRequired,
-    price: PropTypes.number,
     categoryId: PropTypes.shape({ name: PropTypes.string }),
   }).isRequired,
 };

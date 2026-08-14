@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import toJSON from "./plugins/toJSON";
 
 // PRODUCT SCHEMA
 const productSchema = new mongoose.Schema(
@@ -23,10 +22,7 @@ const productSchema = new mongoose.Schema(
   },
   {
     timestamps: true,
-    toJSON: { virtuals: true },
   }
 );
-
-productSchema.plugin(toJSON);
 
 export default mongoose.models.Product || mongoose.model("Product", productSchema);

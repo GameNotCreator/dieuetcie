@@ -31,21 +31,21 @@ export const getProducts = async () => {
   }
 };
 
-// Récupérer une catégorie par son ID
+// Récupérer une catégorie par son ID (null si introuvable → la page renvoie un 404)
 export const getCategoryById = async (id) => {
   try {
     await connectMongo();
     if (!mongoose.Types.ObjectId.isValid(id)) {
-      throw new Error("ID de catégorie invalide.");
+      return null;
     }
     const cat = await Category.findById(id).lean();
     if (!cat) {
-      throw new Error("Catégorie non trouvée.");
+      return null;
     }
     return JSON.parse(JSON.stringify(cat));
   } catch (error) {
     console.error("Error fetching category by ID:", error);
-    throw error;
+    return null;
   }
 };
 
@@ -54,7 +54,7 @@ export const getProductsByCategory = async (categoryId) => {
   try {
     await connectMongo();
     if (!mongoose.Types.ObjectId.isValid(categoryId)) {
-      throw new Error("ID de catégorie invalide.");
+      return [];
     }
     const prods = await Product.find({ categoryId })
       .populate("categoryId", "name")
@@ -62,6 +62,6 @@ export const getProductsByCategory = async (categoryId) => {
     return JSON.parse(JSON.stringify(prods));
   } catch (error) {
     console.error("Error fetching products by category:", error);
-    throw error;
+    return [];
   }
 };

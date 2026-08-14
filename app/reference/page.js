@@ -1,3 +1,7 @@
+export const metadata = {
+    title: "Nos références",
+};
+
 export default function Reference() {
     const references = [
         "Banque Populaire", "Société Générale", "Air France", "L'Oréal",
