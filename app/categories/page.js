@@ -1,20 +1,63 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getCategories } from "@/actions/categories";
 
 // Régénère la page au plus toutes les 60 s, comme l'accueil.
 export const revalidate = 60;
 
+const pageDescription =
+  "Toutes nos gammes de maroquinerie publicitaire fabriquées en France : découvrez les catégories de produits Dieu & Cie et demandez un devis sur mesure.";
+
 export const metadata = {
   title: "Nos catégories de produits",
-  description:
-    "Toutes nos gammes de maroquinerie publicitaire fabriquées en France : découvrez les catégories de produits Dieu & Cie et demandez un devis sur mesure.",
+  description: pageDescription,
+  openGraph: {
+    title: "Nos catégories de produits | Dieu & Cie",
+    description: pageDescription,
+    url: "/categories",
+    images: ["/og.png"],
+  },
 };
+
+const BASE_URL = "https://www.dieu-et-cie.fr";
 
 const CategoriesPage = async () => {
   const categories = await getCategories();
 
+  // Fil d'Ariane + liste des catégories pour les moteurs de recherche
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Accueil", item: BASE_URL },
+          { "@type": "ListItem", position: 2, name: "Nos catégories", item: `${BASE_URL}/categories` },
+        ],
+      },
+      {
+        "@type": "ItemList",
+        name: "Catégories de maroquinerie publicitaire",
+        numberOfItems: categories.length,
+        itemListElement: categories.map((cat, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: cat.name,
+          url: `${BASE_URL}/categories/${cat._id}`,
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#F6F1E9]">
+      <script
+        type="application/ld+json"
+        // Échappe "<" : les noms de catégories viennent du back-office.
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <header className="py-12 px-6 text-center">
         <h1 className="text-4xl font-bold">Nos catégories</h1>
         <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
@@ -25,17 +68,22 @@ const CategoriesPage = async () => {
 
       <main className="px-6 pb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto">
         {categories.length > 0 ? (
-          categories.map((cat) => (
+          categories.map((cat, index) => (
             <Link
               key={cat._id}
               href={`/categories/${cat._id}`}
               className="card bg-white shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1"
             >
-              <figure className="h-48 overflow-hidden">
-                <img
+              <figure className="relative h-48 overflow-hidden">
+                <Image
                   src={cat.imageUrl}
                   alt={cat.name}
-                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  // La première rangée est visible au chargement : candidate
+                  // LCP, à ne pas lazy-loader.
+                  priority={index < 3}
+                  className="object-cover transition-transform duration-300 hover:scale-105"
                 />
               </figure>
               <div className="card-body text-center">

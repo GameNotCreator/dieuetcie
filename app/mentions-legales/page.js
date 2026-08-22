@@ -1,9 +1,17 @@
 import Link from "next/link";
 
+const description =
+  "Mentions légales du site Dieu & Cie : éditeur, hébergeur, propriété intellectuelle et données personnelles.";
+
 export const metadata = {
   title: "Mentions légales",
-  description:
-    "Mentions légales du site Dieu & Cie : éditeur, hébergeur, propriété intellectuelle et données personnelles.",
+  description,
+  openGraph: {
+    title: "Mentions légales | Dieu & Cie",
+    description,
+    url: "/mentions-legales",
+    images: ["/og.png"],
+  },
 };
 
 // Informations issues du registre officiel (Sirene / RCS Bobigny).
