@@ -1,9 +1,21 @@
 import { getCategories } from "@/actions/categories";
 
-const BASE_URL = "https://dieuetcie.vercel.app";
+const BASE_URL = "https://www.dieu-et-cie.fr";
+
+// Sans revalidate, un sitemap est figé au build : les catégories créées via le
+// back-office n'y entreraient jamais avant le prochain déploiement.
+export const revalidate = 3600;
 
 export default async function sitemap() {
-  const staticRoutes = ["", "/about", "/reference", "/marquage", "/contact"].map(
+  const staticRoutes = [
+    "",
+    "/about",
+    "/reference",
+    "/marquage",
+    "/contact",
+    "/categories",
+    "/mentions-legales",
+  ].map(
     (path) => ({
       url: `${BASE_URL}${path}`,
       lastModified: new Date(),

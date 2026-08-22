@@ -16,6 +16,7 @@ const Footer = () => {
                 <nav className="mb-8 flex flex-col items-center justify-center text-center">
                     <ul className="flex flex-col md:flex-row gap-2 md:gap-8">
                         <li><Link href="/" className="hover:text-[#0d4b81] transition-colors">Accueil</Link></li>
+                        <li><Link href="/categories" className="hover:text-[#0d4b81] transition-colors">Nos produits</Link></li>
                         <li><Link href="/about" className="hover:text-[#0d4b81] transition-colors">Qui sommes-nous ?</Link></li>
                         <li><Link href="/reference" className="hover:text-[#0d4b81] transition-colors">Nos références</Link></li>
                         <li><Link href="/marquage" className="hover:text-[#0d4b81] transition-colors">Techniques de marquage</Link></li>
@@ -25,6 +26,7 @@ const Footer = () => {
 
                 <div className="text-sm text-center">
                     <p>© {new Date().getFullYear()} Dieu & Cie. Tous droits réservés.</p>
+                    <p><Link href="/mentions-legales" className="hover:text-[#0d4b81] underline transition-colors">Mentions légales</Link></p>
                     <p>Fait par TunisianPass</p>
                 </div>
             </div>

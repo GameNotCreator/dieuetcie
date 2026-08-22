@@ -8,16 +8,16 @@
     "start": "next start"
   },
   "dependencies": {
-    "mongoose": "^9.1.6",
-    "next": "16.1.6",
+    "mongoose": "^9.9.3",
+    "next": "^16.3.2",
     "prop-types": "^15.8.1",
-    "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/postcss": "^4.3.3",
     "babel-plugin-react-compiler": "1.0.0",
-    "daisyui": "^5.5.14",
-    "tailwindcss": "^4.1.18"
+    "daisyui": "^5.7.20",
+    "tailwindcss": "^4.3.3"
   }
 }

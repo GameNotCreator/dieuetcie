@@ -2,7 +2,7 @@
 
 Site vitrine de **Dieu et Cie**, fabricant français de maroquinerie publicitaire depuis plus de 40 ans (découpe et soudure haute fréquence PVC, petites et grandes séries sur mesure).
 
-Production : [dieuetcie.vercel.app](https://dieuetcie.vercel.app)
+Production : [www.dieu-et-cie.fr](https://www.dieu-et-cie.fr)
 
 ## Stack
 
@@ -16,11 +16,15 @@ Production : [dieuetcie.vercel.app](https://dieuetcie.vercel.app)
 | Route | Contenu |
 |---|---|
 | `/` | Accueil : carrousel, liste des catégories, sélection de produits |
+| `/categories` | Toutes les catégories |
 | `/categories/[id]` | Produits d'une catégorie |
 | `/about` | Qui sommes-nous ? |
 | `/reference` | Références clients |
 | `/marquage` | Techniques de marquage et matières (données : `public/data.json`, `public/matiere.json`) |
 | `/contact` | Contact + plan d'accès |
+| `/mentions-legales` | Mentions légales |
+
+Les URL devinées ou héritées (`/products`, `/produits`, `/a-propos`, …) sont redirigées en 308 via `next.config.mjs`, et toute autre URL inconnue affiche une page 404 personnalisée (`app/not-found.js`).
 
 ## Développement
 

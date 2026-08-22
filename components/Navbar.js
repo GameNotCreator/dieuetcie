@@ -33,7 +33,9 @@ export default function Navbar() {
 
         {/* LEFT - Logo */}
         <div className="navbar-start">
-          <Link href="/" className="flex items-center gap-2">
+          {/* shrink-0 : daisyUI empêche navbar-center de rétrécir, sans quoi
+              le logo se fait écraser quand le menu est large. */}
+          <Link href="/" className="flex items-center gap-2 shrink-0">
             <Image
               src="/logo.png"
               alt="Dieu et Cie"
@@ -45,9 +47,11 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* CENTER - Desktop menu */}
-        <div className="navbar-center hidden lg:flex">
+        {/* CENTER - Desktop menu (xl: le menu à 5 entrées ne tient pas sans
+            écraser le logo entre 1024 et 1280 px, on garde le burger) */}
+        <div className="navbar-center hidden xl:flex">
           <ul className="menu menu-horizontal gap-6 font-medium">
+            <li><Link href="/categories">Nos produits</Link></li>
             <li><Link href="/about">Qui sommes-nous ?</Link></li>
             <li><Link href="/reference">Nos références</Link></li>
             <li><Link href="/marquage">Techniques de marquage</Link></li>
@@ -58,7 +62,7 @@ export default function Navbar() {
         {/* RIGHT - Desktop contact + mobile burger */}
         <div className="navbar-end flex items-center gap-2">
           {/* Contact desktop */}
-          <div className="hidden lg:flex flex-col items-center text-center text-sm gap-1">
+          <div className="hidden xl:flex flex-col items-center text-center text-sm gap-1">
             <span className="font-semibold">Thierry Collet</span>
             <a href="tel:+33695222152" className="font-bold text-lg text-inherit no-underline hover:underline">06 95 22 21 52</a>
             <a
@@ -72,7 +76,7 @@ export default function Navbar() {
           {/* Burger mobile */}
           <button
             type="button"
-            className="btn btn-ghost lg:hidden"
+            className="btn btn-ghost xl:hidden"
             aria-label="Ouvrir le menu"
             onClick={() => setOpen(true)}
           >
@@ -92,7 +96,7 @@ export default function Navbar() {
 
 
       {/* BOTTOM SHEET MOBILE */}
-      <div className={`${open ? "block" : "hidden"} lg:hidden`}>
+      <div className={`${open ? "block" : "hidden"} xl:hidden`}>
         {/* overlay */}
         <div
           className="fixed inset-0 z-50 bg-black/40"
@@ -126,6 +130,7 @@ export default function Navbar() {
 
           {/* Navigation */}
           <div className="flex flex-col gap-3">
+            <NavItem href="/categories">Nos produits</NavItem>
             <NavItem href="/about">Qui sommes-nous ?</NavItem>
             <NavItem href="/reference">Nos références</NavItem>
             <NavItem href="/marquage">Techniques de marquage</NavItem>
