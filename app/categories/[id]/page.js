@@ -81,20 +81,21 @@ const CategoryPage = async (props) => {
                     __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
                 }}
             />
-            <header className="py-12 px-6 text-center">
-                <h1 className="text-4xl font-bold">{category.name}</h1>
+            <header className="py-12 px-6 text-center animate-fade-up">
+                <h1 className="text-4xl font-bold tracking-tight heading-accent">{category.name}</h1>
                 {category.description && (
-                    <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
+                    <p className="mt-5 text-gray-700 max-w-2xl mx-auto leading-relaxed">
                         {category.description}
                     </p>
                 )}
-                <br />
-                <Link href="/" className="btn border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:text-white">
-                    REVENIR À L&apos;ACCUEIL
-                </Link>
+                <div className="mt-8">
+                    <Link href="/" className="btn btn-outline rounded-full px-6 border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white transition-colors">
+                        ‹ Revenir à l&apos;accueil
+                    </Link>
+                </div>
             </header>
 
-            <main className="px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <main className="px-6 pb-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 container mx-auto">
                 {products.length > 0 ? (
                     products.map((prod, index) => (
                         <ProductCard key={prod._id} product={prod} priority={index < 3} />

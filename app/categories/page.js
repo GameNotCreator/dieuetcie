@@ -58,9 +58,9 @@ const CategoriesPage = async () => {
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <header className="py-12 px-6 text-center">
-        <h1 className="text-4xl font-bold">Nos catégories</h1>
-        <p className="mt-4 text-gray-700 max-w-2xl mx-auto">
+      <header className="py-12 px-6 text-center animate-fade-up">
+        <h1 className="text-4xl font-bold tracking-tight heading-accent">Nos catégories</h1>
+        <p className="mt-5 text-gray-700 max-w-2xl mx-auto leading-relaxed">
           Découvrez l&apos;ensemble de nos gammes de maroquinerie publicitaire,
           fabriquées en France et personnalisables sur mesure.
         </p>
@@ -72,7 +72,8 @@ const CategoriesPage = async () => {
             <Link
               key={cat._id}
               href={`/categories/${cat._id}`}
-              className="card bg-white shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1"
+              style={{ animationDelay: `${(index % 6) * 70}ms` }}
+              className="card bg-white shadow-md ring-1 ring-black/5 hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 overflow-hidden animate-fade-up group"
             >
               <figure className="relative h-48 overflow-hidden">
                 <Image
@@ -83,11 +84,11 @@ const CategoriesPage = async () => {
                   // La première rangée est visible au chargement : candidate
                   // LCP, à ne pas lazy-loader.
                   priority={index < 3}
-                  className="object-cover transition-transform duration-300 hover:scale-105"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </figure>
               <div className="card-body text-center">
-                <h2 className="card-title justify-center">{cat.name}</h2>
+                <h2 className="card-title justify-center tracking-tight">{cat.name}</h2>
                 {cat.description && (
                   <p className="text-sm text-gray-600 line-clamp-3">
                     {cat.description}
@@ -103,7 +104,7 @@ const CategoriesPage = async () => {
             <p>Nos catégories ne peuvent pas être affichées pour le moment.</p>
             <Link
               href="/contact"
-              className="btn mt-4 btn-outline border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white"
+              className="btn mt-4 btn-outline rounded-full px-6 border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white transition-colors"
             >
               Contactez-nous pour découvrir nos produits
             </Link>

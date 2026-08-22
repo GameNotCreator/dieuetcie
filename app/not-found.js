@@ -17,19 +17,19 @@ export default function NotFound() {
       <div className="mt-8 flex flex-col sm:flex-row gap-3">
         <Link
           href="/"
-          className="btn bg-[#0d4b81] text-white border-[#0d4b81] hover:bg-blue-900"
+          className="btn rounded-full px-6 border-none bg-[#0d4b81] text-white hover:bg-[#093457] transition-colors"
         >
           Revenir à l&apos;accueil
         </Link>
         <Link
           href="/categories"
-          className="btn btn-outline border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white"
+          className="btn btn-outline rounded-full px-6 border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white transition-colors"
         >
           Voir nos catégories
         </Link>
         <Link
           href="/contact"
-          className="btn btn-outline border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white"
+          className="btn btn-outline rounded-full px-6 border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white transition-colors"
         >
           Contactez-nous
         </Link>

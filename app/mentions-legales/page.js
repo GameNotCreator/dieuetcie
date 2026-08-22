@@ -18,8 +18,8 @@ export const metadata = {
 const MentionsLegalesPage = () => {
   return (
     <div className="min-h-screen bg-[#F6F1E9]">
-      <header className="py-12 px-6 text-center">
-        <h1 className="text-4xl font-bold">Mentions légales</h1>
+      <header className="py-12 px-6 text-center animate-fade-up">
+        <h1 className="text-4xl font-bold tracking-tight heading-accent">Mentions légales</h1>
       </header>
 
       <main className="px-6 pb-16 max-w-3xl mx-auto flex flex-col gap-10 text-gray-800">
@@ -118,7 +118,7 @@ const MentionsLegalesPage = () => {
         <div className="text-center">
           <Link
             href="/"
-            className="btn btn-outline border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white"
+            className="btn btn-outline rounded-full px-6 border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white transition-colors"
           >
             Revenir à l&apos;accueil
           </Link>

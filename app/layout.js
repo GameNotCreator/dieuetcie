@@ -1,6 +1,14 @@
 import "./globals.css";
+import { Manrope } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+
+// Police auto-hébergée au build par next/font : aucun appel réseau côté visiteur.
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-manrope",
+});
 
 export const metadata = {
   metadataBase: new URL("https://www.dieu-et-cie.fr"),
@@ -69,7 +77,7 @@ const businessJsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={manrope.variable}>
       <body className="antialiased">
         <script
           type="application/ld+json"
