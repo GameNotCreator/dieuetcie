@@ -5,13 +5,13 @@ import marquage from "@/public/data.json";
 import matiere from "@/public/matiere.json";
 
 const CardWithImage = ({ item }) => (
-  <div className="card bg-white shadow-sm hover:shadow-md transition-all">
+  <div className="card bg-white shadow-sm ring-1 ring-black/5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group">
     {item.img ? (
-      <figure className="px-4 pt-4">
+      <figure className="px-4 pt-4 overflow-hidden">
         <img
           src={item.img}
           alt={item.title}
-          className="rounded-xl w-full h-52 object-cover"
+          className="rounded-xl w-full h-52 object-cover transition-transform duration-500 group-hover:scale-[1.03]"
           loading="lazy"
         />
       </figure>
@@ -24,7 +24,7 @@ const CardWithImage = ({ item }) => (
 );
 
 const CardNoImage = ({ item }) => (
-  <div className="card bg-white shadow-sm hover:shadow-md transition-all">
+  <div className="card bg-white shadow-sm ring-1 ring-black/5 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
     <div className="card-body">
       <div className="flex items-start gap-3">
         <div className="badge badge-neutral badge-lg mt-1">{item.title?.trim().charAt(0).toUpperCase() || "G"}</div>
@@ -58,8 +58,8 @@ export default function MarquageMatiereShowcase() {
     <div className="min-h-screen">
       <div className="max-w-6xl mx-auto px-4 py-10 space-y-6">
         {/* Header */}
-        <div className="rounded-2xl bg-white shadow-sm p-6">
-          <h1 className="text-3xl font-extrabold text-center">Marquage & Matières</h1>
+        <div className="rounded-2xl bg-white shadow-sm p-6 animate-fade-up">
+          <h1 className="text-4xl font-bold text-center tracking-tight heading-accent">Marquage & Matières</h1>
 
           {/* Tabs */}
           <div className="mt-6 flex items-center justify-center">

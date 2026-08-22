@@ -14,13 +14,13 @@ export default function Error({ reset }) {
         <button
           type="button"
           onClick={() => reset()}
-          className="btn bg-[#0d4b81] text-white border-[#0d4b81] hover:bg-blue-900"
+          className="btn rounded-full px-6 border-none bg-[#0d4b81] text-white hover:bg-[#093457] transition-colors"
         >
           Réessayer
         </button>
         <Link
           href="/"
-          className="btn btn-outline border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white"
+          className="btn btn-outline rounded-full px-6 border-[#0d4b81] text-[#0d4b81] hover:bg-[#0d4b81] hover:border-[#0d4b81] hover:text-white transition-colors"
         >
           Revenir à l&apos;accueil
         </Link>

@@ -19,7 +19,7 @@ export default function Navbar() {
     <Link
       href={href}
       onClick={close}
-      className="flex items-center justify-between rounded-2xl px-4 py-4 text-base font-semibold border border-black/10 active:scale-[0.99]"
+      className="flex items-center justify-between rounded-2xl px-4 py-4 text-base font-semibold border border-black/10 transition-colors hover:border-[#0d4b81]/40 hover:text-[#0d4b81] active:scale-[0.99]"
     >
       <span>{children}</span>
       <span className="opacity-40">›</span>
@@ -51,11 +51,11 @@ export default function Navbar() {
             écraser le logo entre 1024 et 1280 px, on garde le burger) */}
         <div className="navbar-center hidden xl:flex">
           <ul className="menu menu-horizontal gap-6 font-medium">
-            <li><Link href="/categories">Nos produits</Link></li>
-            <li><Link href="/about">Qui sommes-nous ?</Link></li>
-            <li><Link href="/reference">Nos références</Link></li>
-            <li><Link href="/marquage">Techniques de marquage</Link></li>
-            <li><Link href="/contact">Contactez-nous</Link></li>
+            <li><Link href="/categories" className="hover:text-[#0d4b81] transition-colors">Nos produits</Link></li>
+            <li><Link href="/about" className="hover:text-[#0d4b81] transition-colors">Qui sommes-nous ?</Link></li>
+            <li><Link href="/reference" className="hover:text-[#0d4b81] transition-colors">Nos références</Link></li>
+            <li><Link href="/marquage" className="hover:text-[#0d4b81] transition-colors">Techniques de marquage</Link></li>
+            <li><Link href="/contact" className="hover:text-[#0d4b81] transition-colors">Contactez-nous</Link></li>
           </ul>
         </div>
 
@@ -106,7 +106,7 @@ export default function Navbar() {
 
         {/* sheet */}
         <div
-          className="fixed left-0 right-0 bottom-0 z-50 rounded-t-3xl bg-white shadow-2xl p-4"
+          className="fixed left-0 right-0 bottom-0 z-50 rounded-t-3xl bg-white shadow-2xl p-4 animate-fade-up"
           role="dialog"
           aria-modal="true"
         >

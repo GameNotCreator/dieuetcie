@@ -16,9 +16,9 @@ export default function About() {
     return (
         <div className="bg-[#F6F1E9]">
         <div className="container text-black mx-auto px-4 py-16 text-center max-w-4xl">
-            <h1 className="text-3xl font-bold mt-4 mb-8">Qui sommes-nous ?</h1>
+            <h1 className="text-4xl font-bold mt-4 mb-8 tracking-tight heading-accent animate-fade-up">Qui sommes-nous ?</h1>
 
-            <div className="prose lg:prose-xl mx-auto space-y-6 ">
+            <div className="prose lg:prose-xl mx-auto space-y-6 text-left md:text-justify leading-relaxed animate-fade-up" style={{ animationDelay: "120ms" }}>
                 <p>
                     Depuis plus de quarante ans, la société Dieu et Cie est spécialisée dans la grande et petite maroquinerie publicitaire.
                     Notre maîtrise des techniques de découpe et de soudure haute fréquence nous permet de transformer une grande variété

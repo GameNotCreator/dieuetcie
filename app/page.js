@@ -19,15 +19,17 @@ export default async function Home() {
 
   return (
     <main style={{ padding: 20 }} className="bg-[#F6F1E9] text-black">
-      <section className="text-center px-4 pt-2 pb-6">
-        <h1 className="text-3xl lg:text-4xl font-bold">
+      <section className="text-center px-4 pt-2 pb-6 animate-fade-up">
+        <p className="text-sm font-semibold uppercase tracking-widest text-[#0d4b81]">
+          Depuis 1964 — fabrication française
+        </p>
+        <h1 className="mt-2 text-3xl lg:text-4xl font-bold tracking-tight">
           Fabricant français de maroquinerie publicitaire
         </h1>
-        <p className="mt-3 text-gray-700 max-w-3xl mx-auto">
-          Depuis 1964, Dieu &amp; Cie conçoit et fabrique à Noisy-le-Sec vos
-          objets publicitaires en maroquinerie : conférenciers, étuis,
-          classeurs, pochettes… en petites et grandes séries, personnalisés à
-          votre image.
+        <p className="mt-3 text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          Dieu &amp; Cie conçoit et fabrique à Noisy-le-Sec vos objets
+          publicitaires en maroquinerie : conférenciers, étuis, classeurs,
+          pochettes… en petites et grandes séries, personnalisés à votre image.
         </p>
       </section>
       <Hero categories={JSON.stringify(categories)} />
