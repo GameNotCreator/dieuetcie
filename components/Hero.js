@@ -8,7 +8,7 @@ export default function Hero({ categories }) {
       <div className="hero-content flex-col lg:flex-row items-stretch max-w-full w-full px-4 gap-6">
 
         <nav className="bg-[#0d4b81] text-white p-4 rounded-lg flex flex-col justify-center w-full lg:w-1/4 shadow-xl">
-          <h1 className="text-2xl font-bold text-center mb-4">Catégories</h1>
+          <h2 className="text-2xl font-bold text-center mb-4">Catégories</h2>
           {categories.map((c) => (
             <Link href={`/categories/${c._id}`} key={c._id} className="hover:bg-blue-900 p-2 rounded transition-colors block">
               <b className="text-sm w-full block">{c.name}</b>

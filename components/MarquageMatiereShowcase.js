@@ -17,7 +17,7 @@ const CardWithImage = ({ item }) => (
       </figure>
     ) : null}
     <div className="card-body">
-      <h3 className="card-title text-lg">{item.title}</h3>
+      <h2 className="card-title text-lg">{item.title}</h2>
       <p className="text-gray-600 leading-relaxed">{item.description}</p>
     </div>
   </div>
@@ -29,7 +29,7 @@ const CardNoImage = ({ item }) => (
       <div className="flex items-start gap-3">
         <div className="badge badge-neutral badge-lg mt-1">{item.title?.trim().charAt(0).toUpperCase() || "G"}</div>
         <div>
-          <h3 className="text-lg font-bold">{item.title}</h3>
+          <h2 className="text-lg font-bold">{item.title}</h2>
           {item.description ? (
             <p className="text-gray-600 leading-relaxed mt-2">{item.description}</p>
           ) : (

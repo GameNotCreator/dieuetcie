@@ -1,5 +1,15 @@
+const description =
+    "Banques, industries, grands groupes : découvrez les entreprises qui font confiance à Dieu & Cie pour leur maroquinerie publicitaire fabriquée en France.";
+
 export const metadata = {
     title: "Nos références",
+    description,
+    openGraph: {
+        title: "Nos références | Dieu & Cie",
+        description,
+        url: "/reference",
+        images: ["/og.png"],
+    },
 };
 
 export default function Reference() {

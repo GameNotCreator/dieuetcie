@@ -1,6 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactCompiler: true,
+  // Photos produits et catégories hébergées sur UploadThing (via le back-office).
+  images: {
+    remotePatterns: [
+      { protocol: "https", hostname: "utfs.io" },
+      { protocol: "https", hostname: "*.ufs.sh" },
+    ],
+  },
   // Redirige les URL devinées ou héritées de l'ancien site vers les vraies
   // pages : un visiteur ne doit jamais tomber sur un 404 pour ces chemins.
   async redirects() {

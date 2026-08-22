@@ -1,5 +1,15 @@
+const description =
+    "Depuis 1964, Dieu & Cie fabrique en France votre maroquinerie publicitaire : découpe et soudure haute fréquence PVC, petites et grandes séries.";
+
 export const metadata = {
     title: "Qui sommes-nous ?",
+    description,
+    openGraph: {
+        title: "Qui sommes-nous ? | Dieu & Cie",
+        description,
+        url: "/about",
+        images: ["/og.png"],
+    },
 };
 
 export default function About() {

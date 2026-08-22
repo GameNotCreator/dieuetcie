@@ -1,5 +1,15 @@
+const description =
+    "Demandez un devis personnalisé pour votre maroquinerie publicitaire : Dieu & Cie à Noisy-le-Sec — 06 95 22 21 52 — dieuetcie@orange.fr.";
+
 export const metadata = {
     title: "Contactez-nous",
+    description,
+    openGraph: {
+        title: "Contactez-nous | Dieu & Cie",
+        description,
+        url: "/contact",
+        images: ["/og.png"],
+    },
 };
 
 export default function Contact() {
