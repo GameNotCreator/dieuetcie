@@ -3,13 +3,16 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  metadataBase: new URL("https://dieuetcie.vercel.app"),
+  metadataBase: new URL("https://www.dieu-et-cie.fr"),
   title: {
     default: "Dieu & Cie — Maroquinerie publicitaire",
     template: "%s | Dieu & Cie",
   },
   description:
     "Dieu et Cie, fabricant français de maroquinerie publicitaire depuis plus de 40 ans. Spécialiste découpe et soudure haute fréquence PVC. Petites et grandes séries sur mesure.",
+  alternates: {
+    canonical: "./",
+  },
 };
 
 export default function RootLayout({ children }) {

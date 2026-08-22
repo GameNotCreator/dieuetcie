@@ -10,7 +10,7 @@ const categorySchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    // Renseignée via le back-office ; pas encore affichée sur le site vitrine.
+    // Renseignée via le back-office ; affichée sur la page /categories.
     imageUrl: {
       type: String,
       required: true,
