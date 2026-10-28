@@ -1,5 +1,7 @@
 # Dieu & Cie — Site vitrine
 
+**English overview:** Website and product catalogue for Dieu & Cie, built with Next.js and React. Categories and products are managed through a separate administration application. The French documentation below covers the routes, local configuration and deployment workflow.
+
 Site vitrine de **Dieu et Cie**, fabricant français de maroquinerie publicitaire depuis plus de 40 ans (découpe et soudure haute fréquence PVC, petites et grandes séries sur mesure).
 
 Production : [www.dieu-et-cie.fr](https://www.dieu-et-cie.fr)
